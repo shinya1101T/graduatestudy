@@ -129,6 +129,7 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.2-x64-mingw-ucrt)
       racc (~> 1.4)
+    pg (1.5.4-x64-mingw-ucrt)
     public_suffix (5.0.1)
     puma (5.6.6)
       nio4r (~> 2.0)
@@ -225,12 +226,13 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   mini_magick
+  pg
   puma (~> 5.0)
   rails (~> 7.0.6)
   rails-i18n
   selenium-webdriver
   sprockets-rails
-  sqlite3 (~> 1.4)
+  sqlite3
   stimulus-rails
   turbo-rails
   tzinfo-data
