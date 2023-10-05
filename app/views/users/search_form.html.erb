@@ -1,0 +1,25 @@
+<div class="main users-search">
+  <div class="container">
+    <h1 class="users-heading">ユーザー検索</h1>      
+      <%= form_tag("/search", :method=>"get") do %>
+        <input type="search" name="search" placeholder="ユーザー名を入力">
+          <input type="submit" value="検索">
+        <% end %>
+
+        <h2>該当したユーザー</h2>
+        <% if @users.present? %>
+        <% @users.each do |user| %>
+          <div class="users-index-item">
+            <div class="user-left">
+              <img src="<%= "/user_images/#{user.image_name}" %>">
+            </div>
+              <div class="user-right">
+                <%= link_to(user.name, "/users/#{user.id}") %>
+              </div>
+            </div>
+            <% end %>
+          <% else %>
+            <p>該当しませんでした</p>
+          <% end %>
+    </div>
+</div>
