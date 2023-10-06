@@ -234,6 +234,9 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   mini_magick
+  net-imap
+  net-pop
+  net-smtp
   pg
   puma (~> 5.0)
   rails (~> 7.0.6)
