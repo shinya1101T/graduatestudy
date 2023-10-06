@@ -43,6 +43,9 @@ gem "bootsnap", require: false
 gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp'
+gem "rails-i18n"
+gem 'bcrypt'
+gem "mini_magick"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -72,9 +75,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem "rails-i18n"
-  gem 'bcrypt'
-  gem "mini_magick"
 end
 
 group :production do
