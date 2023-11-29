@@ -10,13 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_06_155922) do
-  create_table "dummies", force: :cascade do |t|
-    t.string "名前"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2023_11_23_140625) do
   create_table "likes", force: :cascade do |t|
     t.integer "user_id"
     t.integer "post_id"
@@ -32,6 +26,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_06_155922) do
     t.string "post_image"
   end
 
+  create_table "replies", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "post_id"
+    t.text "reply"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -39,6 +41,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_06_155922) do
     t.datetime "updated_at", null: false
     t.string "image_name"
     t.string "password_digest"
+    t.integer "role", default: 0, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end

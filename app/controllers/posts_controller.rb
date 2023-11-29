@@ -9,6 +9,10 @@ class PostsController < ApplicationController
     @post=Post.find_by(id:params[:id])
     @user = @post.user
     @likes_count = Like.where(post_id: @post.id).count
+    @replys = Reply.all.order(created_at: :desc)
+    @reply = Reply.where(post_id: @post.id)
+    @Post_reply = @reply.pluck(:user_id)
+    @post_repliers = User.where(id: @Post_reply)
   end
 
   def new
@@ -63,5 +67,17 @@ class PostsController < ApplicationController
      flash[:notice] = "権限がありません"
      redirect_to("/posts/index")
     end  
+  end
+
+  def reply
+    @post=Post.find_by(id:params[:id])
+    @replys = Reply.all.order(created_at: :desc)
+  end
+
+  def Rcreate
+    @post = Post.find_by(id: params[:id])
+    @reply = Reply.new(user_id: @current_user.id, post_id: params[:id],reply: params[:reply])
+    @reply.save
+    redirect_to("/posts/index")
   end
 end

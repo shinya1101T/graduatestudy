@@ -8,6 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_importmap_tags %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
@@ -21,10 +22,12 @@
       </div>
       <ul class="header-menus">
       <% if @current_user %>  
+      <details>
+      <summary>メニュー</summary>
       <li>
       <%= link_to(@current_user.name,"/users/#{@current_user.id}") %>
       </li>
-      <li>
+        <li>
             <%= link_to("投稿一覧", "/posts/index") %>
           </li>
           <li>
@@ -45,9 +48,10 @@
           </li>
           <li>
             <%= link_to("ログイン", "/login") %>
-          </li>
-        <% end %>      
+            </li>
+        <% end %>
       </ul>
+      </details>
     </header>
     
     <% if flash[:notice] %>

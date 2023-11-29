@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :likes
+      resources :posts
+      resources :replies
+      resources :users
+
+      root to: "likes#index"
+    end
   post "likes/:post_id/create" => "likes#create"
   post "likes/:post_id/destroy" => "likes#destroy"
-
   post "users/:id/update" => "users#update"
   get "users/:id/edit" => "users#edit"
   post "users/create" => "users#create"
@@ -17,8 +24,10 @@ Rails.application.routes.draw do
 
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
+  post "posts/:id/Rcreate" => "posts#Rcreate"
   get "posts/:id" => "posts#show"
   post "posts/create" => "posts#create"
+  get "posts/:id/reply" => "posts#reply"
   get "posts/:id/edit" => "posts#edit"
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"

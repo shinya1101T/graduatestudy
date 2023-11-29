@@ -17,7 +17,6 @@
  * {
     box-sizing: border-box;
   }
-  
   html {
     font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
     line-height: 1.7;
@@ -60,7 +59,7 @@
   
   .main {
     position: absolute;
-    top: 64px;
+    top: 65px;
     width: 100%;
     height: auto;
     min-height: 100%;
@@ -86,6 +85,7 @@
   .header-logo {
     float: left;
     padding-left: 20px;
+    padding-top: 5px;
     color: white;
     font-size: 22px;
     line-height: 64px;
@@ -306,7 +306,6 @@
     padding: 30px;
     background-color: white;
     box-shadow: 0 2px 6px #c1ced7;
-    overflow: scroll;
   }
   
   .posts-show-item img {
@@ -317,7 +316,7 @@
     vertical-align: middle;
     object-fit: cover;
   }
-  
+
   .posts-show-item .post-user-name a {
     vertical-align: middle;
     font-size: 24px;
@@ -493,4 +492,59 @@
   width: 400px;
   height: 300px;
   object-fit: contain;
+}
+.comment textarea {
+  font-size: 20px;
+  padding: 10px;
+  height: 70px;
+  width: 500px;
+  border: 1px solid rgb(216, 218, 223);
+  resize: none;
+}
+.reply-left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+}
+.reply-left {
+  float: left;
+  width: 10%;
+}
+.reply-right {
+  float: left;
+  width: 90%;
+  padding-left: 25px;
+  text-align: left;
+}
+.reply-user-name a {
+  font-weight: 600;
+}
+.reply-user-name a:hover {
+  color: #3ecdc6;
+}
+summary {
+  cursor: pointer;
+  transition: 0.2s;
+}
+@media screen and (max-width: 479px) {　/*ウィンドウ幅が0～479pxの場合にCSSを適用*/
+  .posts-show-item img#detail-size {
+    width: 100%;
+    height: auto;
+  }
+  .posts-index-item img#detail-size {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .posts-show-item img#detail-size {
+    width: 100%;
+    height: auto; 
+  }
+  .posts-index-item img#detail-size {
+    width: 100%;
+    height: auto; 
+  }
 }

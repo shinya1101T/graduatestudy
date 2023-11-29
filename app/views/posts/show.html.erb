@@ -28,8 +28,29 @@
         <div class="post-menus">
           <%= link_to("編集", "/posts/#{@post.id}/edit") %>
           <%= link_to("削除", "/posts/#{@post.id}/destroy", data: {turbo_method: "post"}) %>
+          </div>
+          <% end %>
         </div>
-      <% end %>
+      </div>
     </div>
+    <%= link_to("返信", "/posts/#{@post.id}/reply") %><br>
+    <% @reply.each do |rcontent| %>
+      <div class="posts-index-item">
+      <div class="reply-left">
+      <% @post_repliers.each do |post_replier| %>
+        <% if rcontent.user_id == post_replier.id %>
+        <img src="<%= "/user_images/#{post_replier.image_name}" %>">
+        </div>
+        <div class="reply-right">
+          <div class="reply-user-name">
+            <%= link_to(post_replier.name, "/users/#{post_replier.id}") %>
+          </div>
+        <%= rcontent.reply %>
+      </div>
+        <% end %>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
+

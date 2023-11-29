@@ -1,0 +1,13 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">返信する</h1>
+    <%= form_tag("/posts/#{@post.id}/Rcreate", data: {turbo_method: "post"}) do %>
+      <div class="form">
+        <div class="form-body">
+          <textarea name="reply"></textarea>
+          <input type="submit" value="返信">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -46,7 +46,9 @@ gem 'net-smtp'
 gem "rails-i18n"
 gem 'bcrypt'
 gem "mini_magick"
+gem 'sassc'
 gem 'pg'
+gem "administrate"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -76,3 +78,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "cssbundling-rails"
