@@ -46,8 +46,8 @@ gem 'net-smtp'
 gem "rails-i18n"
 gem 'bcrypt'
 gem "mini_magick"
-gem 'sassc'
 gem 'pg'
+gem 'sqlite3'
 gem "administrate"
 
 # Use Sass to process CSS
