@@ -22,8 +22,6 @@
       </div>
       <ul class="header-menus">
       <% if @current_user %>  
-      <details>
-      <summary>メニュー</summary>
       <li>
       <%= link_to(@current_user.name,"/users/#{@current_user.id}") %>
       </li>
@@ -37,11 +35,17 @@
             <%= link_to("ユーザー一覧", "/users/index") %>
           </li>
           <li>
+          <%= link_to("ご意見", "https://forms.office.com/r/DE9zQKvWSj") %>
+          </li>
+          <li>
             <%= link_to("ログアウト", "/logout",data:{turbo_method: "post"}) %>
           </li>
             <% else %>
           <li>
             <%= link_to("青ツイとは", "/about") %>
+          </li>
+          <li>
+          <%= link_to("ご意見", "https://forms.office.com/r/DE9zQKvWSj") %>
           </li>
           <li>
             <%= link_to("新規登録", "/signup") %>
@@ -51,7 +55,6 @@
             </li>
         <% end %>
       </ul>
-      </details>
     </header>
     
     <% if flash[:notice] %>
