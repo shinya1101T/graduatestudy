@@ -46,7 +46,7 @@ gem 'net-smtp'
 gem "rails-i18n"
 gem 'bcrypt'
 gem "mini_magick"
-gem 'pg'
+gem 'sassc'
 gem 'sqlite3'
 gem "administrate"
 
