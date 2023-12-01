@@ -52,7 +52,6 @@
   /* 共通レイアウト ================================ */
   body {
     color: #2d3133;
-    background-color: #3e51cd;
     margin: 0;
     min-height: 1vh;
   }
@@ -77,6 +76,7 @@
   /* ヘッダー ================================ */
   header {
     height: 64px;
+    background-color: #3ecdc6;
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -86,13 +86,13 @@
     float: left;
     padding-left: 20px;
     padding-top: 5px;
-    color: white;
+    color: black;
     font-size: 22px;
     line-height: 64px;
   }
   
   .header-logo a{
-    color: white;
+    color: black;
     font-size: 22px;
   }
   
@@ -105,14 +105,14 @@
     float: left;
     line-height: 64px;
     font-size: 13px;
-    color: white;
+    color: black;
     padding-left: 15px;
   }
   
   .header-menus a {
     float: left;
     font-size: 13px;
-    color: white;
+    color: black;
   }
   
   .header-menus .fa {
@@ -137,7 +137,7 @@
     width: 100%;
     height: auto;
     min-height: 100%;
-    color: white;
+    color: black;
     background-color: #3ecdc6;
     background-repeat: no-repeat;
     background-position: center 50%;
@@ -161,7 +161,6 @@
   }
   @media screen and (max-width:480px) {
     .top-main{
-      background-color: #cd3e96;
   
     }
    .top-main h2 {
@@ -172,7 +171,7 @@
   /* about ================================ */
   .about-main {
     padding: 180px 8% 0;
-    color: white;
+    color: black;
   }
   
   .about-main h2 {
@@ -232,7 +231,7 @@
   
   .form input[type="submit"] {
     background-color: #3ecdc6;
-    color: white;
+    color: black;
     cursor: pointer;
     font-weight: 300;
     width: 120px;
@@ -251,7 +250,7 @@
   /* フラッシュ ================================ */
   .flash {
     padding: 10px 0;
-    color: white;
+    color: black;
     background: rgb(251, 170, 88);
     text-align: center;
     position: absolute;
@@ -536,6 +535,43 @@ summary {
   .posts-index-item img#detail-size {
     width: 100%;
     height: auto;
+  }
+  header {
+    height: 90px;
+  }
+  .main {
+    top: 90px;
+  }
+  .header-logo {
+    width: 80px;
+    float: left;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: black;
+    font-size: 22px;
+    line-height: 40px;
+  }
+  .header-menus {
+    float: right;
+    width: calc(100% - 80px);
+    padding-right: 20px;
+  }
+  .header-menus li {
+    float: right;
+    line-height: 40px;
+    font-size: 13px;
+    color: black;
+    padding-left: 15px;
+  }
+  
+  .header-menus a {
+    float: left;
+    font-size: 13px;
+    color: black;
+  }
+  
+  .header-menus .fa {
+    padding-right: 5px;
   }
 }
 @media screen and (max-width: 767px) {
